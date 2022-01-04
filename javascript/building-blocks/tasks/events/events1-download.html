@@ -30,9 +30,18 @@
 
   </body>
   <script>
-    let btn = document.querySelector('.off');
+    const btn = document.querySelector('.off');
 
-    // Add your code here
+    btn.addEventListener('click', () => {
+      if (btn.classList.contains('off')) {
+        btn.textContent = "Machine is on";
+        btn.classList.remove('off');
+      } else {
+        btn.textContent = "Machine is off";
+        btn.classList.add('off');
+
+      }
+    });
 
 
   </script>
